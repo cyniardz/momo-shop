@@ -5,7 +5,7 @@
 빨간 털모자를 쓴 아기곰 캐릭터 **모모**의 굿즈 쇼핑몰입니다.
 PC에서는 왼쪽에 이벤트·검색·퀵메뉴 패널을, 오른쪽에 모바일 쇼핑 화면을 나란히 보여 주는 **일체형 페이지**로 만들었습니다.
 
-- Live: https://momo-shop.vercel.app
+- Live: https://momo-shop-omega.vercel.app
 
 ## 페이지
 
