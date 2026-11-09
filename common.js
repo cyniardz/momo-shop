@@ -159,7 +159,7 @@ const searchHTML = () => `
       <h4>고객센터</h4>
       <div class="tel">02-1234-5678</div>
       <p>평일 10:00 - 17:00 (점심 12:00 - 13:00) · 주말 및 공휴일 휴무</p>
-      <div class="info">상호 모모 스튜디오 · 대표 donghoon<br>사업자등록번호 123-45-67890<br>서울특별시 성동구 성수이로 00 · <a href="mailto:cyniardz@gmail.com">cyniardz@gmail.com</a></div>
+      <div class="info">상호 모모 스튜디오 · 대표 donghoon<br>사업자등록번호 123-45-67890<br>서울특별시 성동구 성수이로 00<br>문의 <a href="https://www.instagram.com/momo_bearstudio/" target="_blank" rel="noopener">인스타그램 DM @momo_bearstudio</a></div>
       <p class="draft" id="draftNotice"></p>
       <p class="copy">© 2026 MOMO STUDIO. ALL RIGHTS RESERVED.</p>
     </footer>`);
