@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About momo | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="about-hero">
+    <img src="images/product_24.png" alt="정면을 바라보는 모모">
+    <div class="about-hero-text">
+      <small>ABOUT MOMO</small>
+      <h2 class="title" id="aboutName">Hello, I'm momo</h2>
+      <p id="aboutIntro"></p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head"><div><h3 class="title">모모 프로필</h3><p>PROFILE</p></div></div>
+    <div class="profile" id="profile"></div>
+  </section>
+
+  <section class="sec" id="gallery">
+    <div class="sec-head"><div><h3 class="title" id="galleryTitle">모모의 하루</h3><p>A DAY WITH MOMO · 16 POSES</p></div></div>
+    <div class="pose-grid" id="poseGrid"></div>
+  </section>
+
+  <section class="sec about-cta">
+    <p class="title">모모와 함께하는 하루를 시작해 볼까요?</p>
+    <a class="btn-primary" href="list.html?cat=doll">모모 인형 보러 가기</a>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script>
+ready.then(() => {
+  const c = DB.character, [m, d] = c.birthday.split('-').map(Number);
+  $('aboutName').textContent = `Hello, I'm ${c.name}`;
+  $('aboutIntro').textContent = c.intro;
+  const chips = arr => arr.map(s => `<span class="chip">${esc(s)}</span>`).join('');
+  $('profile').innerHTML = rows([
+    ['이름', `${esc(c.nameKo)} <span class="muted">(${esc(c.name)})</span>`],
+    ['생일', `${m}월 ${d}일 · ${esc(c.zodiac)}`],
+    ['정체', esc(c.species)],
+    ['트레이드마크', esc(c.trademark)],
+    ['성격', `<ul class="dot-list">${c.personality.map(s => `<li>${esc(s)}</li>`).join('')}</ul>`],
+    ['좋아하는 것', `<div class="chips-inline">${chips(c.likes)}</div>`],
+    ['싫어하는 것', `<div class="chips-inline">${chips(c.dislikes)}</div>`],
+  ]);
+  $('galleryTitle').textContent = DB.gallery.title;
+  $('poseGrid').innerHTML = DB.gallery.items.map(g =>
+    `<figure><img src="${g.image}" alt="${esc(g.caption)}" loading="lazy"><figcaption>${esc(g.pose)}</figcaption></figure>`).join('');
+});
+</script>
+</body>
+</html>

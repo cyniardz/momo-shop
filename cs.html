@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고객센터 | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="page-hero b-pink">
+    <small>CUSTOMER CENTER</small>
+    <h2 class="title">무엇을 도와드릴까요?</h2>
+    <p>02-1234-5678 · 평일 10:00 - 17:00</p>
+  </section>
+
+  <div class="pd-tabs" role="tablist" id="csTabs">
+    <button role="tab" aria-controls="shipping" id="bShipping">배송</button>
+    <button role="tab" aria-controls="international" id="bIntl">해외배송</button>
+    <button role="tab" aria-controls="exchange" id="bExchange">교환·반품</button>
+    <button role="tab" aria-controls="faq" id="bFaq">FAQ</button>
+  </div>
+
+  <section class="sec" role="tabpanel" id="shipping" aria-labelledby="bShipping"></section>
+  <section class="sec" role="tabpanel" id="international" aria-labelledby="bIntl"></section>
+  <section class="sec" role="tabpanel" id="exchange" aria-labelledby="bExchange"></section>
+  <section class="sec faq" role="tabpanel" id="faq" aria-labelledby="bFaq">
+    <details><summary>주문 후 언제 받을 수 있나요?</summary><p>결제 완료 후 1~3영업일 안에 출고돼요. 예약판매 상품은 상품마다 안내된 출고일부터 순서대로 보내드려요.</p></details>
+    <details><summary>예약판매 상품과 일반 상품을 같이 주문하면요?</summary><p>예약 상품이 출고될 때 함께 보내드려요. 일반 상품을 먼저 받고 싶다면 따로 주문해 주세요.</p></details>
+    <details><summary>선물 포장은 어떻게 신청하나요?</summary><p>상품 상세에서 ‘선물포장 추가’를 체크하면 돼요. 일부 상품(에코백, 엽서 세트)은 포장이 되지 않아요.</p></details>
+    <details><summary>해외로도 보낼 수 있나요?</summary><p>EMS로 보내드려요. 지역별 배송비는 ‘해외배송’ 탭에서 확인해 주세요. 예약판매 상품은 해외배송이 되지 않아요.</p></details>
+    <details><summary>인형은 세탁할 수 있나요?</summary><p>미온수에 손세탁 후 그늘에서 말려 주세요. 상품마다 관리 방법이 달라 상세 페이지의 ‘스펙·KC’ 탭을 확인해 주세요.</p></details>
+    <details><summary>아이에게 줘도 괜찮나요?</summary><p>어린이제품 안전확인 대상 상품이며 36개월 이상 사용을 권장해요. 작은 부품이 있어 36개월 미만 영유아는 피해 주세요.</p></details>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script>
+ready.then(() => {
+  const pol = DB.shippingPolicy;
+  $('shipping').innerHTML = `<h4 class="tab-h">국내 배송</h4>${shipDomesticHTML()}
+    <h4 class="tab-h">선물 포장</h4><p class="muted">${won(pol.giftWrap.fee)} · ${esc(pol.giftWrap.notice)}</p>
+    <h4 class="tab-h">예약판매</h4><p class="muted">${esc(pol.preorderNotice)}</p>`;
+  $('international').innerHTML = `<h4 class="tab-h">해외 배송</h4>${shipIntlHTML()}`;
+  $('exchange').innerHTML = `<h4 class="tab-h">교환 · 반품</h4>${exchangeHTML()}`;
+
+  // 탭은 주소 해시와 연결 (cs.html#exchange 로 바로 열림)
+  const tabs = [...$('csTabs').children];
+  function show(id){
+    if (!tabs.some(t => t.getAttribute('aria-controls') === id)) id = 'shipping';
+    tabs.forEach(t => { const on = t.getAttribute('aria-controls') === id; t.classList.toggle('on', on); t.setAttribute('aria-selected', on); $(t.getAttribute('aria-controls')).hidden = !on; });
+  }
+  $('csTabs').onclick = e => { const t = e.target.closest('[role=tab]'); if (t) history.replaceState(null, '', '#' + t.getAttribute('aria-controls')), show(t.getAttribute('aria-controls')); };
+  addEventListener('hashchange', () => show(location.hash.slice(1)));
+  show(location.hash.slice(1));
+});
+</script>
+</body>
+</html>

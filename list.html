@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전체 상품 | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="page-hero b-pink">
+    <small>OUR PRODUCTS</small>
+    <h2 class="title" id="listTitle">모두의 일상에 작은 행복을</h2>
+    <p id="listSub">모모 친구들을 모두 만나보세요</p>
+  </section>
+
+  <section class="sec list-sec">
+    <nav class="cat-chips" id="catChips" aria-label="카테고리"></nav>
+
+    <div class="list-tools">
+      <button class="filter-btn" id="filterBtn" aria-expanded="false" aria-controls="filters">필터 <span id="filterCount"></span></button>
+      <span class="list-count" id="listCount"></span>
+      <label class="sort">정렬 <select id="sort"></select></label>
+    </div>
+
+    <form class="filters" id="filters" hidden>
+      <fieldset><legend>가격대</legend><div id="fPrice"></div></fieldset>
+      <fieldset><legend>판매 형태</legend><div id="fEdition"></div></fieldset>
+      <fieldset><legend>배송 · 포장</legend><div id="fCond"></div></fieldset>
+      <button type="button" class="reset-btn" id="resetBtn">초기화</button>
+    </form>
+
+    <div class="grid" id="grid"></div>
+    <nav class="pager" id="pager" aria-label="페이지"></nav>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script src="list.js"></script>
+</body>
+</html>

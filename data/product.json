@@ -1,0 +1,1624 @@
+{
+  "meta": {
+    "brandName": "momo",
+    "brandNameKo": "모모",
+    "currency": {
+      "code": "KRW",
+      "symbol": "원"
+    },
+    "imageExtension": ".png",
+    "pageSize": 12,
+    "isDraft": true,
+    "draftNotice": "캐릭터 설정, 가격, 후기는 임시 데이터입니다.",
+    "updatedAt": "2026-11-09"
+  },
+  "character": {
+    "name": "momo",
+    "nameKo": "모모",
+    "birthday": "06-08",
+    "zodiac": "쌍둥이자리",
+    "species": "아기곰",
+    "personality": [
+      "수줍음이 많지만 호기심이 가득해요",
+      "느긋하고 다정한 성격이에요",
+      "작은 일에도 크게 기뻐해요"
+    ],
+    "likes": [
+      "빨간 사과",
+      "따뜻한 털모자",
+      "햇볕 아래 낮잠",
+      "핫초코"
+    ],
+    "dislikes": [
+      "비 오는 날",
+      "시끄러운 소리"
+    ],
+    "trademark": "빨간 니트 보닛과 목에 맨 빨간 리본",
+    "intro": "빨간 털모자를 쓰고 사과를 좋아하는 아기곰 모모예요. 당신의 하루에 작은 포근함을 전하러 왔어요.",
+    "colors": {
+      "primary": "#8B1E2B",
+      "cream": "#F3E9DC",
+      "beige": "#E6D5C3"
+    }
+  },
+  "categories": [
+    {
+      "id": "doll",
+      "label": "인형"
+    },
+    {
+      "id": "keyring",
+      "label": "키링"
+    },
+    {
+      "id": "living",
+      "label": "리빙"
+    },
+    {
+      "id": "stationery",
+      "label": "문구"
+    },
+    {
+      "id": "fashion",
+      "label": "패션잡화"
+    },
+    {
+      "id": "giftset",
+      "label": "선물세트"
+    }
+  ],
+  "filters": {
+    "priceRanges": [
+      {
+        "id": "under-10k",
+        "label": "1만원 미만",
+        "min": 0,
+        "max": 10000
+      },
+      {
+        "id": "10k-20k",
+        "label": "1만원 ~ 2만원",
+        "min": 10000,
+        "max": 20000
+      },
+      {
+        "id": "20k-30k",
+        "label": "2만원 ~ 3만원",
+        "min": 20000,
+        "max": 30000
+      },
+      {
+        "id": "over-30k",
+        "label": "3만원 이상",
+        "min": 30000,
+        "max": null
+      }
+    ],
+    "edition": [
+      {
+        "id": "regular",
+        "label": "상시 판매"
+      },
+      {
+        "id": "limited",
+        "label": "한정판"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "giftWrap",
+        "label": "선물포장 가능"
+      },
+      {
+        "id": "preorder",
+        "label": "예약판매"
+      },
+      {
+        "id": "international",
+        "label": "해외배송 가능"
+      }
+    ],
+    "sortOptions": [
+      {
+        "id": "popular",
+        "label": "인기순",
+        "key": "salesCount",
+        "order": "desc"
+      },
+      {
+        "id": "newest",
+        "label": "최신순",
+        "key": "createdAt",
+        "order": "desc"
+      },
+      {
+        "id": "price-asc",
+        "label": "낮은 가격순",
+        "key": "price",
+        "order": "asc"
+      },
+      {
+        "id": "price-desc",
+        "label": "높은 가격순",
+        "key": "price",
+        "order": "desc"
+      },
+      {
+        "id": "rating",
+        "label": "평점순",
+        "key": "rating.average",
+        "order": "desc"
+      }
+    ]
+  },
+  "badges": {
+    "best": {
+      "label": "BEST",
+      "tone": "red"
+    },
+    "new": {
+      "label": "NEW",
+      "tone": "olive"
+    },
+    "limited": {
+      "label": "LIMITED",
+      "tone": "dark"
+    }
+  },
+  "shippingPolicy": {
+    "domestic": {
+      "carrier": "CJ대한통운",
+      "method": "택배 배송",
+      "fee": 3000,
+      "freeThreshold": 50000,
+      "extraFee": {
+        "jeju": 3000,
+        "island": 5000
+      },
+      "leadTime": "결제 후 1~3영업일 이내 출고"
+    },
+    "international": {
+      "available": true,
+      "carrier": "EMS (우체국 국제특송)",
+      "method": "국제 특송",
+      "leadTime": "출고 후 7~14일 이내 도착",
+      "regions": [
+        {
+          "id": "asia",
+          "label": "일본·중국·동남아",
+          "fee": 12000
+        },
+        {
+          "id": "america",
+          "label": "미국·캐나다",
+          "fee": 18000
+        },
+        {
+          "id": "europe",
+          "label": "유럽",
+          "fee": 20000
+        },
+        {
+          "id": "oceania",
+          "label": "호주·뉴질랜드",
+          "fee": 18000
+        }
+      ],
+      "notices": [
+        "해외 배송 시 국가별 관세와 부가세는 수령인이 부담합니다.",
+        "예약판매 상품은 해외 배송이 불가합니다."
+      ]
+    },
+    "giftWrap": {
+      "fee": 2000,
+      "notice": "선물 포장은 리본 상자와 메시지 카드로 구성됩니다."
+    },
+    "preorderNotice": "예약 상품과 일반 상품을 함께 주문하면 예약 상품 출고일에 맞춰 함께 발송됩니다.",
+    "exchange": {
+      "period": "상품 수령 후 7일 이내",
+      "returnFee": 3000,
+      "exchangeFee": 6000,
+      "allowed": [
+        "상품 불량·파손",
+        "오배송"
+      ],
+      "notAllowed": [
+        "포장을 개봉해 상품 가치가 훼손된 경우",
+        "인형의 태그를 제거하거나 세탁한 경우",
+        "한정판 상품의 단순 변심",
+        "해외 배송 상품의 단순 변심"
+      ],
+      "contact": "고객센터 1:1 문의 (사진 첨부)"
+    }
+  },
+  "gallery": {
+    "title": "모모의 하루",
+    "items": [
+      {
+        "id": 17,
+        "image": "images/product_17.png",
+        "pose": "앉아서 쉬는 모모",
+        "caption": "귀여운 앉아서 쉬는 모모"
+      },
+      {
+        "id": 18,
+        "image": "images/product_18.png",
+        "pose": "엎드려 뒹구는 모모",
+        "caption": "귀여운 엎드려 뒹구는 모모"
+      },
+      {
+        "id": 19,
+        "image": "images/product_19.png",
+        "pose": "아장아장 걷는 모모",
+        "caption": "귀여운 아장아장 걷는 모모"
+      },
+      {
+        "id": 20,
+        "image": "images/product_20.png",
+        "pose": "뒤돌아보는 모모",
+        "caption": "귀여운 뒤돌아보는 모모"
+      },
+      {
+        "id": 21,
+        "image": "images/product_21.png",
+        "pose": "털모자 뒤태를 자랑하는 모모",
+        "caption": "귀여운 털모자 뒤태를 자랑하는 모모"
+      },
+      {
+        "id": 22,
+        "image": "images/product_22.png",
+        "pose": "창밖을 바라보는 모모",
+        "caption": "귀여운 창밖을 바라보는 모모"
+      },
+      {
+        "id": 23,
+        "image": "images/product_23.png",
+        "pose": "손 인사하는 모모",
+        "caption": "귀여운 손 인사하는 모모"
+      },
+      {
+        "id": 24,
+        "image": "images/product_24.png",
+        "pose": "정면을 바라보는 모모",
+        "caption": "귀여운 정면을 바라보는 모모"
+      },
+      {
+        "id": 25,
+        "image": "images/product_25.png",
+        "pose": "사과와 함께인 모모",
+        "caption": "귀여운 사과와 함께인 모모"
+      },
+      {
+        "id": 26,
+        "image": "images/product_26.png",
+        "pose": "고개를 갸웃하는 모모",
+        "caption": "귀여운 고개를 갸웃하는 모모"
+      },
+      {
+        "id": 27,
+        "image": "images/product_27.png",
+        "pose": "옆모습이 귀여운 모모",
+        "caption": "귀여운 옆모습이 귀여운 모모"
+      },
+      {
+        "id": 28,
+        "image": "images/product_28.png",
+        "pose": "다소곳이 앉은 모모",
+        "caption": "귀여운 다소곳이 앉은 모모"
+      },
+      {
+        "id": 29,
+        "image": "images/product_29.png",
+        "pose": "등을 보이고 앉은 모모",
+        "caption": "귀여운 등을 보이고 앉은 모모"
+      },
+      {
+        "id": 30,
+        "image": "images/product_30.png",
+        "pose": "살금살금 다가가는 모모",
+        "caption": "귀여운 살금살금 다가가는 모모"
+      },
+      {
+        "id": 31,
+        "image": "images/product_31.png",
+        "pose": "깡충 뛰어오르는 모모",
+        "caption": "귀여운 깡충 뛰어오르는 모모"
+      },
+      {
+        "id": 32,
+        "image": "images/product_32.png",
+        "pose": "졸린 눈의 모모",
+        "caption": "귀여운 졸린 눈의 모모"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "모모 홀리데이 선물 세트",
+      "summary": "선물 상자를 열자마자 반겨주는 모모, 소중한 사람에게 따뜻한 마음을 전해보세요",
+      "category": "giftset",
+      "pose": "선물 상자 속 모모",
+      "originalPrice": 49000,
+      "price": 44100,
+      "discountRate": 10,
+      "badge": "limited",
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#선물세트",
+        "#연말선물",
+        "#한정판"
+      ],
+      "edition": "limited",
+      "images": {
+        "main": "images/product_01.png",
+        "details": [
+          "images/product_17.png",
+          "images/product_23.png",
+          "images/product_24.png"
+        ]
+      },
+      "options": null,
+      "specs": {
+        "material": "폴리에스터, 종이 박스",
+        "size": "박스 28×20×12cm / 인형 15cm",
+        "weight": "약 450g",
+        "care": "인형은 미온수 손세탁, 그늘 건조",
+        "components": "모모 인형 S, 엽서 2종, 리본 선물 상자"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 30,
+      "maxQuantity": 5,
+      "salesCount": 253,
+      "createdAt": "2026-03-08",
+      "rating": {
+        "average": 4.7,
+        "count": 29
+      },
+      "reviews": [
+        {
+          "id": 101,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-04",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": null
+        },
+        {
+          "id": 102,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-13",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        3,
+        7,
+        11
+      ]
+    },
+    {
+      "id": 2,
+      "name": "모모 데스크 인형",
+      "summary": "책상 한편에 앉아 하루를 응원해주는 모모, 지친 오후에 작은 쉼표가 되어줄 거예요",
+      "category": "doll",
+      "pose": "책상 위에 앉은 모모",
+      "originalPrice": 25000,
+      "price": 25000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#데스크테리어",
+        "#인형"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_02.png",
+        "details": [
+          "images/product_24.png",
+          "images/product_27.png",
+          "images/product_29.png"
+        ]
+      },
+      "options": [
+        {
+          "id": "S",
+          "label": "S (15cm)",
+          "extraPrice": 0
+        },
+        {
+          "id": "M",
+          "label": "M (25cm)",
+          "extraPrice": 10000
+        },
+        {
+          "id": "L",
+          "label": "L (40cm)",
+          "extraPrice": 25000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트",
+        "size": "S 기준 15cm",
+        "weight": "약 120g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 306,
+      "createdAt": "2026-04-15",
+      "rating": {
+        "average": 4.8,
+        "count": 46
+      },
+      "reviews": [
+        {
+          "id": 201,
+          "author": "이*나",
+          "rating": 4,
+          "date": "2026-10-07",
+          "content": "생각보다 크기가 조금 작았지만 디테일이 예뻐요.",
+          "option": "S (15cm)"
+        },
+        {
+          "id": 202,
+          "author": "한*솔",
+          "rating": 5,
+          "date": "2026-10-16",
+          "content": "친구랑 하나씩 나눠 가졌어요. 재구매 의사 있습니다.",
+          "option": "S (15cm)"
+        }
+      ],
+      "relatedIds": [
+        3,
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "name": "모모 사과 인형",
+      "summary": "제일 좋아하는 빨간 사과를 꼭 챙긴 모모, 보기만 해도 기분이 상큼해져요",
+      "category": "doll",
+      "pose": "사과와 함께인 모모",
+      "originalPrice": 29000,
+      "price": 24600,
+      "discountRate": 15,
+      "badge": "best",
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#사과",
+        "#인형",
+        "#베스트"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_03.png",
+        "details": [
+          "images/product_25.png",
+          "images/product_26.png",
+          "images/product_20.png"
+        ]
+      },
+      "options": [
+        {
+          "id": "S",
+          "label": "S (15cm)",
+          "extraPrice": 0
+        },
+        {
+          "id": "M",
+          "label": "M (25cm)",
+          "extraPrice": 10000
+        },
+        {
+          "id": "L",
+          "label": "L (40cm)",
+          "extraPrice": 25000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트",
+        "size": "S 기준 15cm (사과 소품 포함)",
+        "weight": "약 140g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 759,
+      "createdAt": "2026-05-22",
+      "rating": {
+        "average": 4.9,
+        "count": 63
+      },
+      "reviews": [
+        {
+          "id": 301,
+          "author": "정*아",
+          "rating": 5,
+          "date": "2026-10-10",
+          "content": "볼 때마다 기분이 좋아져서 모모 시리즈를 모으고 있어요.",
+          "option": "S (15cm)"
+        },
+        {
+          "id": 302,
+          "author": "김*연",
+          "rating": 5,
+          "date": "2026-10-19",
+          "content": "사진보다 실물이 훨씬 귀여워요. 털모자 질감이 정말 좋아요.",
+          "option": "S (15cm)"
+        }
+      ],
+      "relatedIds": [
+        2,
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 4,
+      "name": "모모 기본 인형",
+      "summary": "빨간 털모자를 쓰고 얌전히 앉은 모모, 처음 만나는 모모라면 이 친구부터 시작해보세요",
+      "category": "doll",
+      "pose": "얌전히 앉은 모모",
+      "originalPrice": 25000,
+      "price": 25000,
+      "discountRate": 0,
+      "badge": "best",
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#기본인형",
+        "#첫모모"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_04.png",
+        "details": [
+          "images/product_24.png",
+          "images/product_21.png",
+          "images/product_22.png",
+          "images/product_28.png"
+        ]
+      },
+      "options": [
+        {
+          "id": "S",
+          "label": "S (15cm)",
+          "extraPrice": 0
+        },
+        {
+          "id": "M",
+          "label": "M (25cm)",
+          "extraPrice": 10000
+        },
+        {
+          "id": "L",
+          "label": "L (40cm)",
+          "extraPrice": 25000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트",
+        "size": "S 기준 15cm",
+        "weight": "약 120g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 812,
+      "createdAt": "2026-06-02",
+      "rating": {
+        "average": 4.6,
+        "count": 80
+      },
+      "reviews": [
+        {
+          "id": 401,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-13",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": "S (15cm)"
+        },
+        {
+          "id": 402,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-22",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": "S (15cm)"
+        }
+      ],
+      "relatedIds": [
+        2,
+        3,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 5,
+      "name": "모모 인형 키링",
+      "summary": "가방 끝에서 달랑달랑 흔들리는 모모, 어디든 함께 다니는 작은 친구가 되어줘요",
+      "category": "keyring",
+      "pose": "가방에 매달린 모모",
+      "originalPrice": 12000,
+      "price": 12000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모키링",
+        "#가방꾸미기",
+        "#키링"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_05.png",
+        "details": []
+      },
+      "options": [
+        {
+          "id": "single",
+          "label": "단품",
+          "extraPrice": 0
+        },
+        {
+          "id": "couple",
+          "label": "커플 2개 세트",
+          "extraPrice": 8000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 금속 고리",
+        "size": "인형 8cm",
+        "weight": "약 30g",
+        "care": "부분 손세탁"
+      },
+      "safety": {
+        "kc": "해당 없음 (장식용품)",
+        "kcNumber": null,
+        "age": "14세 이상",
+        "warning": "금속 고리에 손이 다치지 않도록 주의해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 465,
+      "createdAt": "2026-07-09",
+      "rating": {
+        "average": 4.7,
+        "count": 97
+      },
+      "reviews": [
+        {
+          "id": 501,
+          "author": "한*솔",
+          "rating": 5,
+          "date": "2026-10-16",
+          "content": "친구랑 하나씩 나눠 가졌어요. 재구매 의사 있습니다.",
+          "option": "단품"
+        },
+        {
+          "id": 502,
+          "author": "이*나",
+          "rating": 4,
+          "date": "2026-10-25",
+          "content": "생각보다 크기가 조금 작았지만 디테일이 예뻐요.",
+          "option": "단품"
+        }
+      ],
+      "relatedIds": [
+        8,
+        13,
+        1,
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "name": "모모 페이스 머그컵",
+      "summary": "따뜻한 차 한 잔에 모모 얼굴이 쏙, 아침마다 미소 짓게 되는 머그컵이에요",
+      "category": "living",
+      "pose": "머그컵 속 모모",
+      "originalPrice": 18000,
+      "price": 18000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모머그",
+        "#머그컵",
+        "#홈카페"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_06.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "세라믹",
+        "size": "지름 8.5cm × 높이 9cm",
+        "capacity": "350ml",
+        "weight": "약 330g",
+        "care": "전자레인지·식기세척기 사용 가능"
+      },
+      "safety": null,
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 518,
+      "createdAt": "2026-08-16",
+      "rating": {
+        "average": 4.8,
+        "count": 114
+      },
+      "reviews": [
+        {
+          "id": 601,
+          "author": "김*연",
+          "rating": 5,
+          "date": "2026-10-19",
+          "content": "사진보다 실물이 훨씬 귀여워요. 털모자 질감이 정말 좋아요.",
+          "option": null
+        },
+        {
+          "id": 602,
+          "author": "정*아",
+          "rating": 5,
+          "date": "2026-10-28",
+          "content": "볼 때마다 기분이 좋아져서 모모 시리즈를 모으고 있어요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        9,
+        12,
+        15,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "name": "모모 리본 인형",
+      "summary": "목에 빨간 리본을 단 모모, 수줍은 표정으로 오늘도 당신을 기다리고 있어요",
+      "category": "doll",
+      "pose": "리본을 단 모모",
+      "originalPrice": 27000,
+      "price": 27000,
+      "discountRate": 0,
+      "badge": "best",
+      "badgeInImage": true,
+      "hashtags": [
+        "#모모",
+        "#리본",
+        "#베스트인형"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_07.png",
+        "details": [
+          "images/product_23.png",
+          "images/product_27.png",
+          "images/product_20.png"
+        ]
+      },
+      "options": [
+        {
+          "id": "S",
+          "label": "S (15cm)",
+          "extraPrice": 0
+        },
+        {
+          "id": "M",
+          "label": "M (25cm)",
+          "extraPrice": 10000
+        },
+        {
+          "id": "L",
+          "label": "L (40cm)",
+          "extraPrice": 25000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트, 새틴 리본",
+        "size": "S 기준 15cm",
+        "weight": "약 125g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 971,
+      "createdAt": "2026-09-23",
+      "rating": {
+        "average": 4.9,
+        "count": 131
+      },
+      "reviews": [
+        {
+          "id": 701,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-22",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": "S (15cm)"
+        },
+        {
+          "id": 702,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-03",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": "S (15cm)"
+        }
+      ],
+      "relatedIds": [
+        2,
+        3,
+        4,
+        10
+      ]
+    },
+    {
+      "id": 8,
+      "name": "모모 미니 키링",
+      "summary": "손바닥 위에 쏙 올라오는 작은 모모, 에어팟과 열쇠에 귀여움을 더해보세요",
+      "category": "keyring",
+      "pose": "손바닥만 한 모모",
+      "originalPrice": 10000,
+      "price": 10000,
+      "discountRate": 0,
+      "badge": "new",
+      "badgeInImage": true,
+      "hashtags": [
+        "#모모키링",
+        "#미니키링",
+        "#신상"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_08.png",
+        "details": []
+      },
+      "options": [
+        {
+          "id": "single",
+          "label": "단품",
+          "extraPrice": 0
+        },
+        {
+          "id": "couple",
+          "label": "커플 2개 세트",
+          "extraPrice": 8000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 금속 고리",
+        "size": "인형 6cm",
+        "weight": "약 20g",
+        "care": "부분 손세탁"
+      },
+      "safety": {
+        "kc": "해당 없음 (장식용품)",
+        "kcNumber": null,
+        "age": "14세 이상",
+        "warning": "금속 고리에 손이 다치지 않도록 주의해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 624,
+      "createdAt": "2026-10-03",
+      "rating": {
+        "average": 4.6,
+        "count": 28
+      },
+      "reviews": [
+        {
+          "id": 801,
+          "author": "이*나",
+          "rating": 4,
+          "date": "2026-10-25",
+          "content": "생각보다 크기가 조금 작았지만 디테일이 예뻐요.",
+          "option": "단품"
+        },
+        {
+          "id": 802,
+          "author": "한*솔",
+          "rating": 5,
+          "date": "2026-10-06",
+          "content": "친구랑 하나씩 나눠 가졌어요. 재구매 의사 있습니다.",
+          "option": "단품"
+        }
+      ],
+      "relatedIds": [
+        5,
+        13,
+        1,
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "name": "모모 투톤 머그컵",
+      "summary": "빨간 손잡이가 포인트인 투톤 머그, 모모와 함께라면 홈카페가 더 즐거워져요",
+      "category": "living",
+      "pose": "머그컵 옆면의 모모",
+      "originalPrice": 19000,
+      "price": 17100,
+      "discountRate": 10,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모머그",
+        "#투톤머그",
+        "#선물추천"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_09.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "세라믹",
+        "size": "지름 8.5cm × 높이 9cm",
+        "capacity": "350ml",
+        "weight": "약 340g",
+        "care": "전자레인지·식기세척기 사용 가능"
+      },
+      "safety": null,
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 677,
+      "createdAt": "2026-02-10",
+      "rating": {
+        "average": 4.7,
+        "count": 45
+      },
+      "reviews": [
+        {
+          "id": 901,
+          "author": "정*아",
+          "rating": 5,
+          "date": "2026-10-28",
+          "content": "볼 때마다 기분이 좋아져서 모모 시리즈를 모으고 있어요.",
+          "option": null
+        },
+        {
+          "id": 902,
+          "author": "김*연",
+          "rating": 5,
+          "date": "2026-10-09",
+          "content": "사진보다 실물이 훨씬 귀여워요. 털모자 질감이 정말 좋아요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        6,
+        12,
+        15,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "name": "모모 손인사 인형",
+      "summary": "작은 손을 흔들며 인사하는 모모, 현관에 두면 매일 반갑게 맞아줄 거예요",
+      "category": "doll",
+      "pose": "손 인사하는 모모",
+      "originalPrice": 27000,
+      "price": 27000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#인사하는모모",
+        "#인형"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_10.png",
+        "details": [
+          "images/product_23.png",
+          "images/product_19.png",
+          "images/product_31.png"
+        ]
+      },
+      "options": [
+        {
+          "id": "S",
+          "label": "S (15cm)",
+          "extraPrice": 0
+        },
+        {
+          "id": "M",
+          "label": "M (25cm)",
+          "extraPrice": 10000
+        },
+        {
+          "id": "L",
+          "label": "L (40cm)",
+          "extraPrice": 25000
+        }
+      ],
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트",
+        "size": "S 기준 15cm",
+        "weight": "약 125g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 230,
+      "createdAt": "2026-03-17",
+      "rating": {
+        "average": 4.8,
+        "count": 62
+      },
+      "reviews": [
+        {
+          "id": 1001,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-03",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": "S (15cm)"
+        },
+        {
+          "id": 1002,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-12",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": "S (15cm)"
+        }
+      ],
+      "relatedIds": [
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "id": 11,
+      "name": "모모 다이어리 세트",
+      "summary": "모모와 함께 쓰는 하루 기록, 다이어리와 펜이 한 세트로 구성되어 있어요",
+      "category": "stationery",
+      "pose": "다이어리 표지의 모모",
+      "originalPrice": 22000,
+      "price": 19800,
+      "discountRate": 10,
+      "badge": "best",
+      "badgeInImage": true,
+      "hashtags": [
+        "#모모다이어리",
+        "#문구",
+        "#다꾸",
+        "#베스트"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_11.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "종이, 레더릿 커버",
+        "size": "A5 (148×210mm)",
+        "weight": "약 380g",
+        "components": "다이어리 1권, 노트 1권, 볼펜 1자루",
+        "care": "물기와 직사광선을 피해 보관"
+      },
+      "safety": null,
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 683,
+      "createdAt": "2026-04-24",
+      "rating": {
+        "average": 4.9,
+        "count": 79
+      },
+      "reviews": [
+        {
+          "id": 1101,
+          "author": "한*솔",
+          "rating": 5,
+          "date": "2026-10-06",
+          "content": "친구랑 하나씩 나눠 가졌어요. 재구매 의사 있습니다.",
+          "option": null
+        },
+        {
+          "id": 1102,
+          "author": "이*나",
+          "rating": 4,
+          "date": "2026-10-15",
+          "content": "생각보다 크기가 조금 작았지만 디테일이 예뻐요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        16,
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "id": 12,
+      "name": "모모 얼굴 쿠션",
+      "summary": "포근한 쿠션 위에 그려진 모모 얼굴, 소파에 기대 쉴 때 꼭 끌어안아 보세요",
+      "category": "living",
+      "pose": "쿠션 속 모모",
+      "originalPrice": 32000,
+      "price": 32000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모쿠션",
+        "#쿠션",
+        "#인테리어소품"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_12.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "커버 폴리에스터, 충전재 마이크로화이바",
+        "size": "40×40cm",
+        "weight": "약 600g",
+        "care": "커버 분리 후 울코스 세탁"
+      },
+      "safety": null,
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 336,
+      "createdAt": "2026-05-04",
+      "rating": {
+        "average": 4.6,
+        "count": 96
+      },
+      "reviews": [
+        {
+          "id": 1201,
+          "author": "김*연",
+          "rating": 5,
+          "date": "2026-10-09",
+          "content": "사진보다 실물이 훨씬 귀여워요. 털모자 질감이 정말 좋아요.",
+          "option": null
+        },
+        {
+          "id": 1202,
+          "author": "정*아",
+          "rating": 5,
+          "date": "2026-10-18",
+          "content": "볼 때마다 기분이 좋아져서 모모 시리즈를 모으고 있어요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        6,
+        9,
+        15,
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "name": "모모 커플 키링 세트",
+      "summary": "나란히 선 두 모모처럼, 소중한 사람과 하나씩 나눠 달아보세요",
+      "category": "keyring",
+      "pose": "나란히 선 두 모모",
+      "originalPrice": 20000,
+      "price": 18000,
+      "discountRate": 10,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모키링",
+        "#커플키링",
+        "#우정템"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_13.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "폴리에스터, 금속 고리",
+        "size": "인형 각 8cm",
+        "weight": "약 60g",
+        "components": "키링 2개",
+        "care": "부분 손세탁"
+      },
+      "safety": {
+        "kc": "해당 없음 (장식용품)",
+        "kcNumber": null,
+        "age": "14세 이상",
+        "warning": "금속 고리에 손이 다치지 않도록 주의해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 389,
+      "createdAt": "2026-06-11",
+      "rating": {
+        "average": 4.7,
+        "count": 113
+      },
+      "reviews": [
+        {
+          "id": 1301,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-12",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": null
+        },
+        {
+          "id": 1302,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-21",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        5,
+        8,
+        1,
+        3
+      ]
+    },
+    {
+      "id": 14,
+      "name": "모모 에코백",
+      "summary": "모모가 그려진 데일리 에코백, 가벼운 외출길에 귀여움을 함께 챙겨보세요",
+      "category": "fashion",
+      "pose": "에코백 위의 모모",
+      "originalPrice": 24000,
+      "price": 24000,
+      "discountRate": 0,
+      "badge": "new",
+      "badgeInImage": true,
+      "hashtags": [
+        "#모모에코백",
+        "#에코백",
+        "#데일리백",
+        "#신상"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_14.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "코튼 캔버스 100%",
+        "size": "가로 36 × 세로 40 × 끈 길이 60cm",
+        "weight": "약 250g",
+        "care": "찬물 단독 손세탁, 표백제 사용 금지"
+      },
+      "safety": null,
+      "giftWrap": false,
+      "preorder": {
+        "isPreorder": true,
+        "shipDate": "2026-12-01",
+        "notice": "예약 주문 상품으로 2026년 12월 1일부터 순차 출고됩니다."
+      },
+      "shipping": {
+        "domestic": true,
+        "international": false
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 442,
+      "createdAt": "2026-07-18",
+      "rating": {
+        "average": 4.8,
+        "count": 130
+      },
+      "reviews": [
+        {
+          "id": 1401,
+          "author": "이*나",
+          "rating": 4,
+          "date": "2026-10-15",
+          "content": "생각보다 크기가 조금 작았지만 디테일이 예뻐요.",
+          "option": null
+        },
+        {
+          "id": 1402,
+          "author": "한*솔",
+          "rating": 5,
+          "date": "2026-10-24",
+          "content": "친구랑 하나씩 나눠 가졌어요. 재구매 의사 있습니다.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        1,
+        3,
+        7,
+        11
+      ]
+    },
+    {
+      "id": 15,
+      "name": "모모 낮잠 쿠션 인형",
+      "summary": "포근하게 엎드려 낮잠 자는 모모, 베개처럼 끌어안고 함께 쉬어보세요",
+      "category": "living",
+      "pose": "엎드려 낮잠 자는 모모",
+      "originalPrice": 39000,
+      "price": 39000,
+      "discountRate": 0,
+      "badge": "limited",
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모",
+        "#낮잠모모",
+        "#쿠션인형",
+        "#한정판"
+      ],
+      "edition": "limited",
+      "images": {
+        "main": "images/product_15.png",
+        "details": [
+          "images/product_18.png",
+          "images/product_32.png",
+          "images/product_30.png"
+        ]
+      },
+      "options": null,
+      "specs": {
+        "material": "폴리에스터, 아크릴 니트",
+        "size": "길이 45cm",
+        "weight": "약 400g",
+        "care": "미온수 손세탁, 그늘 건조"
+      },
+      "safety": {
+        "kc": "어린이제품 안전확인 대상",
+        "kcNumber": "등록 예정",
+        "age": "36개월 이상",
+        "warning": "작은 부품이 있어 36개월 미만 영유아는 사용을 피해 주세요."
+      },
+      "giftWrap": true,
+      "preorder": {
+        "isPreorder": true,
+        "shipDate": "2026-12-08",
+        "notice": "예약 주문 상품으로 2026년 12월 8일부터 순차 출고됩니다."
+      },
+      "shipping": {
+        "domestic": true,
+        "international": false
+      },
+      "stock": 30,
+      "maxQuantity": 5,
+      "salesCount": 495,
+      "createdAt": "2026-08-25",
+      "rating": {
+        "average": 4.9,
+        "count": 27
+      },
+      "reviews": [
+        {
+          "id": 1501,
+          "author": "정*아",
+          "rating": 5,
+          "date": "2026-10-18",
+          "content": "볼 때마다 기분이 좋아져서 모모 시리즈를 모으고 있어요.",
+          "option": null
+        },
+        {
+          "id": 1502,
+          "author": "김*연",
+          "rating": 5,
+          "date": "2026-10-27",
+          "content": "사진보다 실물이 훨씬 귀여워요. 털모자 질감이 정말 좋아요.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        6,
+        9,
+        12,
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "name": "모모 엽서 세트",
+      "summary": "모모의 소소한 일상을 담은 엽서, 짧은 안부에 다정함을 더해 전해보세요",
+      "category": "stationery",
+      "pose": "엽서 속 모모",
+      "originalPrice": 6000,
+      "price": 6000,
+      "discountRate": 0,
+      "badge": null,
+      "badgeInImage": false,
+      "hashtags": [
+        "#모모엽서",
+        "#엽서",
+        "#손편지"
+      ],
+      "edition": "regular",
+      "images": {
+        "main": "images/product_16.png",
+        "details": []
+      },
+      "options": null,
+      "specs": {
+        "material": "아트지 300g",
+        "size": "100×148mm",
+        "weight": "약 60g",
+        "components": "엽서 6종",
+        "care": "물기를 피해 보관"
+      },
+      "safety": null,
+      "giftWrap": false,
+      "preorder": null,
+      "shipping": {
+        "domestic": true,
+        "international": true
+      },
+      "stock": 100,
+      "maxQuantity": 5,
+      "salesCount": 548,
+      "createdAt": "2026-09-05",
+      "rating": {
+        "average": 4.6,
+        "count": 44
+      },
+      "reviews": [
+        {
+          "id": 1601,
+          "author": "최*희",
+          "rating": 4,
+          "date": "2026-10-21",
+          "content": "배송이 빨랐고 색감도 사진과 똑같아요.",
+          "option": null
+        },
+        {
+          "id": 1602,
+          "author": "박*지",
+          "rating": 5,
+          "date": "2026-10-02",
+          "content": "선물했더니 너무 좋아했어요. 포장도 꼼꼼했습니다.",
+          "option": null
+        }
+      ],
+      "relatedIds": [
+        11,
+        1,
+        3,
+        7
+      ]
+    }
+  ]
+}

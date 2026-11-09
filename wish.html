@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>위시리스트 | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="sec">
+    <div class="sec-head"><div><h2 class="title page-title">위시리스트</h2><p id="wishSub"></p></div></div>
+    <div id="wishBox"></div>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script>
+ready.then(() => {
+  // 하트를 누르거나 로그인/로그아웃하면 common.js가 'wishchange'를 보냄
+  function render(){
+    const list = user ? wish.map(byId).filter(Boolean) : [];
+    $('wishSub').textContent = user ? `${list.length}개의 친구를 찜했어요` : '';
+    $('wishBox').innerHTML = !user
+      ? `<div class="empty-box"><img src="images/product_26.png" alt="고개를 갸웃하는 모모"><p>로그인하면 찜한 친구들을 볼 수 있어요.</p><button class="btn-primary" id="wishLogin">로그인</button></div>`
+      : list.length ? `<div class="grid">${list.map(card).join('')}</div>`
+      : `<div class="empty-box"><img src="images/product_22.png" alt="창밖을 바라보는 모모"><p>아직 찜한 친구가 없어요.<br>마음에 드는 상품의 ♡를 눌러 보세요.</p><a class="btn-primary" href="list.html">상품 보러 가기</a></div>`;
+  }
+  $('wishBox').onclick = e => { if (e.target.id === 'wishLogin') openLogin(); };
+  document.addEventListener('wishchange', render);
+  render();
+});
+</script>
+</body>
+</html>

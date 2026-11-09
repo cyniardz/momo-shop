@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>상품 상세 | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <nav class="crumb" id="crumb" aria-label="현재 위치"></nav>
+
+  <!-- 이미지 갤러리 -->
+  <section class="pd-gallery">
+    <div class="pd-main" id="pdMain"></div>
+    <div class="pd-thumbs" id="pdThumbs"></div>
+  </section>
+
+  <!-- 상품 정보 + 구매 -->
+  <section class="pd-info" id="pdInfo"></section>
+  <form class="pd-buy" id="pdBuy"></form>
+
+  <!-- 탭 -->
+  <div class="pd-tabs" role="tablist" id="pdTabs">
+    <button role="tab" class="on" aria-selected="true" aria-controls="tDetail" id="bDetail">상세정보</button>
+    <button role="tab" aria-selected="false" aria-controls="tSpec" id="bSpec">스펙·KC</button>
+    <button role="tab" aria-selected="false" aria-controls="tShip" id="bShip">배송·교환</button>
+    <button role="tab" aria-selected="false" aria-controls="tReview" id="bReview">후기</button>
+  </div>
+  <section class="pd-panel sec" role="tabpanel" id="tDetail" aria-labelledby="bDetail"></section>
+  <section class="pd-panel sec" role="tabpanel" id="tSpec" aria-labelledby="bSpec" hidden></section>
+  <section class="pd-panel sec" role="tabpanel" id="tShip" aria-labelledby="bShip" hidden></section>
+  <section class="pd-panel sec" role="tabpanel" id="tReview" aria-labelledby="bReview" hidden></section>
+
+  <!-- 연관 상품 -->
+  <section class="sec">
+    <div class="sec-head"><div><h3 class="title">함께 보면 좋은 친구들</h3><p>모모와 어울리는 상품</p></div></div>
+    <div class="hscroll" id="related"></div>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script src="detail.js"></script>
+</body>
+</html>

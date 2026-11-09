@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>momo. | 작은 친구가 만드는 커다란 행복</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-intro>
+<!-- 헤더·푸터·왼쪽 패널·모달은 common.js가 채움 -->
+<main class="app">
+  <!-- 메인 슬라이드 -->
+  <section class="hero">
+    <div class="slides" id="slides">
+      <a class="slide" href="list.html">
+        <img src="images/product_16.png" alt="Small things, Big happiness 문구 옆에 앉은 모모 인형">
+        <div class="slide-text">
+          <small>OUR PRODUCTS</small>
+          <h2 class="title">모두의 일상에<br>작은 행복을.</h2>
+          <p>소중한 순간을 더 특별하게 만들어줄 모모 친구들.</p>
+        </div>
+      </a>
+      <a class="slide" href="about.html">
+        <img src="images/product_03.png" alt="받침대 위에 앉은 모모 인형">
+        <div class="slide-text">
+          <small>MEET YOUR LITTLE FRIEND</small>
+          <h2 class="title">작은 친구가 만드는<br>커다란 행복.</h2>
+          <p>곁에 두고 싶은 친구, 모모를 만나보세요.</p>
+        </div>
+      </a>
+      <a class="slide" href="event.html#holiday">
+        <img src="images/product_01.png" alt="선물 상자 속 모모 인형">
+        <div class="slide-text">
+          <small>A LITTLE GIFT, A LOT OF LOVE</small>
+          <h2 class="title">좋아하는 마음을,<br>모모에 담아.</h2>
+          <p>정성스러운 포장으로 마음을 전해보세요.</p>
+        </div>
+      </a>
+    </div>
+    <span class="hero-count" id="heroCount">1 / 3</span>
+  </section>
+
+  <!-- 카테고리 -->
+  <nav class="cats" id="cats" aria-label="카테고리"></nav>
+
+  <!-- 베스트 -->
+  <section class="sec" id="best">
+    <div class="sec-head">
+      <div><h3 class="title">모모 BEST</h3><p>#인형 #키링 #가장 사랑받는 친구들</p></div>
+      <a href="list.html?sort=popular" class="more-pill">전체보기</a>
+    </div>
+    <div class="grid" id="bestGrid"></div>
+    <a class="more-btn" href="list.html?sort=popular">MORE</a>
+  </section>
+
+  <!-- 스토리 배너 -->
+  <a class="story" href="about.html">
+    <img src="images/product_02.png" alt="책상 위에 앉은 모모 인형">
+    <div class="story-text">
+      <small>YOUR EVERYDAY COMPANION</small>
+      <h3 class="title">아무것도 하지 않아도,<br>함께라서 좋은 날.</h3>
+      <p>바쁘게 흘러가는 하루,<br>책상 한쪽의 모모가<br>작은 미소를 건네요.</p>
+    </div>
+  </a>
+
+  <!-- 소중한 이유 -->
+  <section class="sec">
+    <div class="sec-head"><div><h3 class="title">작지만, 소중한 이유</h3><p>MADE WITH A LITTLE LOVE</p></div></div>
+    <div class="reasons">
+      <div class="reason"><span class="no">01</span><div><b>매일 봐도, 늘 귀여워</b><p>단순한 표정에 담은 모모만의 다정함</p></div></div>
+      <div class="reason"><span class="no">02</span><div><b>오래 곁에 둘 수 있도록</b><p>보드라운 촉감부터 작은 마감까지 꼼꼼하게</p></div></div>
+      <div class="reason"><span class="no">03</span><div><b>마음을 전하는 작은 선물</b><p>열어보는 순간부터 기분 좋은 선물이에요</p></div></div>
+    </div>
+  </section>
+
+  <!-- 타임세일 -->
+  <section class="sec" id="timesale"></section>
+
+  <!-- 선물 기획전 -->
+  <section class="sec" id="gift">
+    <div class="sec-head"><div><h3 class="title">모모 선물 기획전</h3><p>상황별로 골라보는 선물</p></div><a href="event.html" class="more-pill">기획전</a></div>
+    <div class="tabs" id="giftTabs"></div>
+    <div class="hscroll" id="giftList"></div>
+  </section>
+
+  <!-- 순위 -->
+  <section class="sec rank">
+    <div class="sec-head"><div><h3 class="title">모모 굿즈 순위</h3><p>#이번 주 #가장 많이 담은 상품</p></div></div>
+    <div id="rankList"></div>
+  </section>
+
+  <!-- 이벤트 -->
+  <section class="sec" id="event">
+    <div class="sec-head"><div><h3 class="title">이벤트</h3><p>모모가 준비한 작은 선물</p></div><a href="event.html#coupon" class="more-pill">전체보기</a></div>
+    <div id="couponList"></div>
+  </section>
+
+  <!-- 리뷰 -->
+  <section class="sec" id="review">
+    <div class="sec-head"><div><h3 class="title">베스트 리뷰</h3><p>모모와 함께한 이야기</p></div></div>
+    <div class="hscroll" id="reviewList"></div>
+  </section>
+
+  <!-- 인스타 -->
+  <section class="sec" id="insta">
+    <div class="sec-head"><div><h3 class="title">Instagram</h3><p>@momo.littlefriend</p></div><a href="#insta" class="more-pill">팔로우</a></div>
+    <div class="insta" id="instaGrid"></div>
+  </section>
+</main>
+
+<script src="common.js"></script>
+<script src="js.js"></script>
+</body>
+</html>

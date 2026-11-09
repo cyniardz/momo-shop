@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>기획전 · 이벤트 | momo.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="page-hero b-beige">
+    <small>MOMO EVENT</small>
+    <h2 class="title">모모가 준비한<br>작은 선물</h2>
+    <p>지금 진행 중인 기획전과 혜택을 모았어요</p>
+  </section>
+
+  <!-- 기획전 바로가기 탭 -->
+  <nav class="ev-tabs" id="evTabs" aria-label="기획전 바로가기"></nav>
+
+  <section class="sec" id="coupon">
+    <div class="sec-head"><div><h3 class="title">쿠폰 · 혜택</h3><p>모든 회원에게 드려요</p></div></div>
+    <div id="couponList"></div>
+  </section>
+
+  <section class="sec" id="timesale"></section>
+
+  <div id="eventList"></div>
+</main>
+
+<script src="common.js"></script>
+<script>
+ready.then(() => {
+  const list = EV.events;
+  $('evTabs').innerHTML = `<a href="#coupon">혜택</a><a href="#timesale">타임세일</a>` + list.map(e => `<a href="#${e.id}">${esc(e.title)}</a>`).join('');
+  $('couponList').innerHTML = couponsHTML();
+  renderTimesale($('timesale'));
+  $('eventList').innerHTML = list.map(e => `
+    <section class="sec ev-sec" id="${e.id}">
+      <div class="ev-banner ${e.tone}">
+        <div class="ev-banner-text"><small>${esc(e.eyebrow)}</small><h3 class="title">${esc(e.title)}</h3><p>${br(e.desc)}</p><span class="ev-date">${esc(e.period)}</span></div>
+        <div class="ev-banner-pic"><img src="${e.image}" alt="${esc(e.alt)}" loading="lazy"></div>
+      </div>
+      <div class="grid">${e.productIds.map(byId).filter(Boolean).map(card).join('')}</div>
+    </section>`).join('');
+});
+</script>
+</body>
+</html>

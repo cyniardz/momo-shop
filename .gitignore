@@ -1,0 +1,5 @@
+.vercel
+.playwright-mcp
+graphify-out
+.DS_Store
+Thumbs.db

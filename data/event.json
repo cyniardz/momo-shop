@@ -1,0 +1,104 @@
+{
+  "side": {
+    "eyebrow": "SIGNATURE MOMO EDITION",
+    "title": "MOMO GIFT BOX",
+    "sub": "마음을 전하는 모모 선물 패키지",
+    "image": "images/product_01.png",
+    "alt": "선물 상자 속 모모 인형",
+    "badgeLabel": "Gift",
+    "badgeValue": "10%",
+    "period": "이벤트 기간 : 11월 1일 ~ 소진 시 까지",
+    "link": "event.html#holiday"
+  },
+  "modal": {
+    "slides": [
+      {
+        "eyebrow": "MOMO HOLIDAY",
+        "title": "Gift\nWeek",
+        "desc": "홀리데이 선물 세트 10% OFF\n포장 & 메시지 카드 무료!",
+        "image": "images/product_01.png",
+        "alt": "선물 상자 속 모모 인형",
+        "note": "마음을\n담아 보내요 ♡",
+        "link": "event.html#holiday"
+      },
+      {
+        "eyebrow": "NEW ARRIVAL",
+        "title": "New\nFriend",
+        "desc": "모모 미니 키링 출시\n가방에 쏙, 언제나 함께",
+        "image": "images/product_08.png",
+        "alt": "모모 미니 키링",
+        "note": "10,000원\nNEW!",
+        "link": "detail.html?id=8"
+      },
+      {
+        "eyebrow": "WELCOME COUPON",
+        "title": "Hello,\nmomo",
+        "desc": "신규 회원 웰컴 쿠폰 3,000원\n지금 바로 받아가세요",
+        "image": "images/product_04.png",
+        "alt": "얌전히 앉은 모모 인형",
+        "note": "첫 구매\n3,000원 할인",
+        "link": "event.html#coupon"
+      }
+    ]
+  },
+  "timesale": {
+    "productId": 1,
+    "title": "오늘의 타임세일",
+    "tags": "#오늘 자정까지 #한정 수량"
+  },
+  "coupons": [
+    { "small": "신규 회원 첫 구매", "title": "웰컴 쿠폰\n바로 드려요", "big": "3,000원", "tone": "b-pink", "action": "join", "cta": "회원가입하고 받기" },
+    { "small": "모든 주문 대상", "title": "선물 포장 &\n메시지 카드 무료", "big": "FREE", "tone": "b-beige" }
+  ],
+  "giftThemes": [
+    { "id": "birthday", "label": "#생일선물", "productIds": [1, 3, 7, 11, 8] },
+    { "id": "housewarming", "label": "#집들이", "productIds": [6, 9, 12, 15] },
+    { "id": "bag", "label": "#가방꾸미기", "productIds": [5, 8, 13, 14] }
+  ],
+  "events": [
+    {
+      "id": "holiday",
+      "eyebrow": "MOMO HOLIDAY",
+      "title": "모모 홀리데이 기프트",
+      "desc": "한 해 동안 고마웠던 사람에게,\n모모가 마음을 대신 전해드려요.",
+      "period": "2026.11.01 ~ 2026.12.25",
+      "image": "images/product_01.png",
+      "alt": "선물 상자 속 모모 인형",
+      "tone": "b-pink",
+      "productIds": [1, 15, 11, 16]
+    },
+    {
+      "id": "new",
+      "eyebrow": "NEW ARRIVAL",
+      "title": "새로 온 친구들",
+      "desc": "손바닥만 한 미니 키링과\n데일리 에코백이 새로 나왔어요.",
+      "period": "2026.11.01 ~ 소진 시까지",
+      "image": "images/product_08.png",
+      "alt": "모모 미니 키링",
+      "tone": "b-beige",
+      "productIds": [8, 14]
+    },
+    {
+      "id": "bag",
+      "eyebrow": "BAG DECO",
+      "title": "가방 꾸미기 기획전",
+      "desc": "어디든 함께 다니는 작은 친구,\n키링과 에코백을 모아봤어요.",
+      "period": "상시 진행",
+      "image": "images/product_05.png",
+      "alt": "가방에 매달린 모모 키링",
+      "tone": "b-pink",
+      "productIds": [5, 8, 13, 14]
+    },
+    {
+      "id": "preorder",
+      "eyebrow": "PRE-ORDER",
+      "title": "예약판매 한정판",
+      "desc": "수량이 정해진 한정판이에요.\n예약 주문 후 순차 출고됩니다.",
+      "period": "2026.11.09 ~ 2026.11.30",
+      "image": "images/product_15.png",
+      "alt": "엎드려 낮잠 자는 모모 쿠션 인형",
+      "tone": "b-beige",
+      "productIds": [15, 14]
+    }
+  ]
+}
